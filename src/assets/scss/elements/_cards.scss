@@ -1,0 +1,46 @@
+@use "../helpers/" as *;
+
+$card-border-radius: 0.75em;
+
+.card {
+  display: grid;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 40em;
+  border-radius: $card-border-radius;
+  box-shadow: 0 10px 10px 0 rgb(0 0 0 / 20%);
+
+  & img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  &.client--card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1.5em 0;
+    max-width: 20em;
+    background-color: $text-dark;
+    min-width: 18rem;
+
+    transform: scale(1);
+    transition: all 100ms ease-in-out;
+    & img {
+      max-width: 7em;
+      border-radius: 50%;
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.08);
+    }
+  }
+}
+
+.card-dark {
+  background-color: $accent-darker;
+}

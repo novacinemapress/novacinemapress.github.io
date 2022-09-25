@@ -1,0 +1,30 @@
+<header class="header" id="header">
+    <img class="header--logo" routerLink="/" src="../../assets/images/inlineLogo.png" alt="Novacinemapress Logo">
+    <div class="header--ham-container" (click)="animateMenu()">
+        <div class="header--ham">
+        <span class="header--ham--line" id="line1"></span>
+        <span class="header--ham--line" id="line2"></span>
+        <span class="header--ham--line" id="line3"></span>
+    </div>
+    </div>
+
+    <div class="header--menu">
+        <a routerLink="/" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Home</a>
+        <a routerLink="contact" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Contatti</a>
+        <a routerLink="about" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Su di noi</a>
+        <a routerLink="clients" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" class="header--menu--item">Clienti</a>
+    </div>
+    
+</header>
+
+<div class="accordion-menu" id="ham-menu">
+    <div class="accordion-menu--list">
+        <a routerLink="/" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" (click)="animateMenu()">Home</a>
+        <a routerLink="contact" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" (click)="animateMenu()">Contatti</a>
+        <a routerLink="about" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" (click)="animateMenu()">Su di noi</a>
+        <a routerLink="clients" routerLinkActive="active-page" [routerLinkActiveOptions]="{exact: true}" (click)="animateMenu()">Clienti</a>
+    </div>
+    <img src="../../assets/images/Logo.png" alt="Novacinemapress Logo" class="accordion-menu--logo">
+</div>
+
+<!-- <div class="background-darken show-hide" id="background-darken"></div> -->
