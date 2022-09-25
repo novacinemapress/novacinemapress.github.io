@@ -13,6 +13,7 @@ body {
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  font-size: 18px;
   margin: 0;
   box-sizing: border-box;
   background-color: $background;
@@ -23,6 +24,7 @@ app-root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f1f1f1;
 }
 
 p {
