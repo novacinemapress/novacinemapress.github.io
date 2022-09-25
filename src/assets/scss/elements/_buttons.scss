@@ -9,6 +9,7 @@
   margin-bottom: 3em;
   border-radius: 1em;
   width: fit-content;
+  font-size: 0.9rem;
 
   &:hover,
   &:focus {
@@ -33,11 +34,5 @@
   &:focus {
     color: $text-light;
     background-color: $accent;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .btn {
-    font-size: 0.9rem;
   }
 }

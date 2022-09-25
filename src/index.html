@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 <head>
   <meta charset="utf-8">
   <title>NovaCinemaPress</title>
@@ -9,8 +9,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300;500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 </head>
 <body>
   <app-root></app-root>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#232323",
+      "text": "#ffffff",
+    },
+    "button": {
+      "background": "#d32d7d",
+      "text": "#ffffff"
+    }
+  },
+  "theme": "classic",
+  "content": {
+    "message": "Questo sito utilizza solo cookies tecnici. Non utilizziamo cookies di profilazione,  di marketing o di terze parti.",
+    "dismiss": "Capito!",
+    "link": "Scopri di più"
+  }
+});
+</script>
 </body>
 </html>

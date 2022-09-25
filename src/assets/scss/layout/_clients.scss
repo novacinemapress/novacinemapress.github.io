@@ -26,6 +26,7 @@
 }
 
 .client--link {
+  text-decoration: none;
   &:nth-of-type(odd) {
     animation: 700ms ease-in-out slideLeft;
   }
