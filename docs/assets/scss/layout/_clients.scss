@@ -1,0 +1,68 @@
+@use "../helpers/" as *;
+
+.client {
+  &--container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    gap: 2em;
+  }
+  &--name,
+  &--role {
+    color: $text-light;
+  }
+
+  &--name {
+    font-weight: 500;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  &--role {
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5em;
+  }
+}
+
+.client--link {
+  text-decoration: none;
+  &:nth-of-type(odd) {
+    animation: 700ms ease-in-out slideLeft;
+  }
+  &:nth-of-type(even) {
+    animation: 700ms ease-in-out slideRight;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translate(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translate(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .client {
+    &--container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
