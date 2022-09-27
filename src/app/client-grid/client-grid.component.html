@@ -1,17 +1,9 @@
-<div class="client--container">
-    <a href="http://www.fernandoalba.it" target="_blank" class="client--link">
+<div class="client--container" *ngIf="clients">
+    <a *ngFor="let client of clients" href={{client.website}} target="_blank" class="client--link">
         <div class="client--card card">
-            <img src="../../assets/images/clients/alba.jpg" alt="" class="client--img">
-            <p class="client--name">Fernando Alba</p>
-            <p class="client--role">Produttore, cantautore</p>
-        </div>
-    </a>
-    
-    <a href="https://alessandro-bencini.com/it/" target="_blank" class="client--link">
-        <div class="client--card card">
-            <img src="../../assets/images/clients/bencini.jpg" alt="" class="client--img">
-            <p class="client--name">Alessandro Bencini</p>
-            <p class="client--role">Compositore, cantante</p>
+            <img [src]="'../../assets/images/clients/' + client.image" alt="" class="client--img"/>
+            <p class="client--name">{{ client.name }}</p>
+            <p class="client--role">{{ client.role }}</p>
         </div>
     </a>
 </div>
