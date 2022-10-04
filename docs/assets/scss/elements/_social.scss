@@ -1,0 +1,52 @@
+@use "../helpers/" as *;
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 2em;
+  padding-bottom: 3em;
+}
+
+.social {
+  text-decoration: none;
+  color: $text-light;
+  font-size: 2em;
+  transition: all 150ms ease-in-out;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+  &.dark {
+    color: $text-dark;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .social {
+    &::after {
+      content: "";
+      display: block;
+      background-color: $text-light;
+      height: 2px;
+      width: 1rem;
+      margin: 0 auto;
+      transform: scale(0);
+      transition: all 200ms ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      transform: scale(1);
+    }
+  }
+}
