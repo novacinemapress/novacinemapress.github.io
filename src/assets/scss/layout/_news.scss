@@ -25,9 +25,8 @@ $card-border-radius: 0.75em;
   justify-content: space-between;
   width: 95%;
   margin: 0 auto;
-  position: absolute;
-  bottom: -13em;
-  left: 2%;
+  position: relative;
+  bottom: 22em;
 
   & div {
     background-color: rgba($color: #fff, $alpha: 0.8);
