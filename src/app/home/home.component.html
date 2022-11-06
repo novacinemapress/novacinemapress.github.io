@@ -17,6 +17,8 @@
 </div>
 
 <div class="home">
+    <app-news></app-news>
+
     <section class="home--mission">
         <div class="par">
             <h2 class="par-title">Mission</h2>
@@ -28,10 +30,18 @@
 
     <section class="home--clients dark">
         <div class="par par--dark">
-            <h2 class="par-title">Clienti</h2>
+            <h2 class="par-title">Portfolio</h2>
                 <p>I nostri clienti sono <strong>sempre in primo piano</strong>, che siano in scena o dietro le quinte.</p>
             
-                <app-client-grid></app-client-grid>
+                <div class="client--container" *ngIf="clients">
+                    <a *ngFor="let client of clients" href={{client.website}} target="_blank" class="client--link">
+                        <div class="client--card card">
+                            <img [src]="'../../assets/images/clients/' + client.image" alt="" class="client--img"/>
+                            <p class="client--name">{{ client.name }}</p>
+                            <p class="client--role">{{ client.role }}</p>
+                        </div>
+                    </a>
+                </div>
         </div>
 
         <button routerLink="clients" class="btn btn-light">Tutti i clienti</button>

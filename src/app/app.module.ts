@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { ClientsComponent } from './clients/clients.component';
 import { ClientGridComponent } from './client-grid/client-grid.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { ClientGridComponent } from './client-grid/client-grid.component';
     AboutComponent,
     ClientsComponent,
     ClientGridComponent,
+    NewsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

@@ -1,0 +1,18 @@
+<section class="home--news dark">
+    <div class="par">
+        <h2 class="par-title">News</h2>
+            <div class="news--container" *ngIf="newses" id="news">
+                <div class="news--card card card-light" *ngFor="let news of newses">
+                    <h3 class="news--title">{{ news.title }}</h3>
+                    <p class="news--artist">{{ news.artist }}</p>
+                    <img class="news--img" [src]="'../../assets/images/news/' + news.image">
+                </div>
+            </div>
+
+            <button routerLink="about" class="btn btn-dark">Scopri di più</button>
+    </div>
+    <div class="arrows">
+        <div (click)="scrollBack()"><i class="fa-solid fa-angle-left"></i></div>
+        <div (click)="scrollForward()"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+</section>

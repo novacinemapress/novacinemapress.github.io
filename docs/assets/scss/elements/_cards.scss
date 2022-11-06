@@ -39,8 +39,33 @@ $card-border-radius: 0.75em;
       transform: scale(1.08);
     }
   }
+
+  &.news--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 18rem;
+    max-width: 24rem;
+    color: $text-dark;
+
+    & p {
+      color: $text-dark;
+    }
+
+    & img {
+      margin-bottom: 0;
+      border-bottom-left-radius: $card-border-radius;
+      border-bottom-right-radius: $card-border-radius;
+      max-height: 300px;
+      min-width: 100%;
+    }
+  }
 }
 
 .card-dark {
   background-color: $accent-darker;
+}
+
+.card-light {
+  background-color: $light;
 }

@@ -1,0 +1,48 @@
+@use "../helpers/" as *;
+
+$card-border-radius: 0.75em;
+
+.news {
+  &--container {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    gap: 1em;
+    padding-bottom: 2em;
+  }
+
+  &--title {
+    font-size: 1.25rem;
+  }
+
+  &--artist {
+    color: $accent !important;
+  }
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -13em;
+  left: 2%;
+
+  & div {
+    background-color: rgba($color: #fff, $alpha: 0.8);
+    color: $text-dark;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 624px) {
+  .arrows {
+    display: none;
+  }
+}
